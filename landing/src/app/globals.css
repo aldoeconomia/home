@@ -1,55 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Base */
-  --color-background: #ffffff;
-  --color-foreground: #1a1a1a;
+  --color-back: #f7f7f4;
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-brand: #cf3130;
+  --color-brand-back: #f3c7c7;
+  --color-blue: #133a62;
+  --color-blue-back:#afcfdb;
+  --color-orange: #cd8401;
+  --color-orange-back: #ffefd4;
+  --color-brown: #83704d;
+  --color-brown-back: #dbc293;
+  --color-red: #fb1c0a;
+  --color-success: #c5e1c7;
+  --color-error: #fb3858;
 
-  /* Primary – rojo Qontrol */
-  --color-primary: #ce312f;
-  --color-primary-foreground: #ffffff;
 
-  /* Secondary – naranja */
-  --color-secondary: #cd8401;
-  --color-secondary-foreground: #ffffff;
 
-  /* Muted */
-  --color-muted: #d9d9d9;
-  --color-muted-foreground: #1a1a1a;
 
-  /* Accent – azul oscuro */
-  --color-accent: #0c3249;
-  --color-accent-foreground: #ffffff;
-
-  /* Destructive */
-  --color-destructive: #ce312f;
-
-  /* Border / Input / Ring */
-  --color-border: #d9d9d9;
-  --color-input: #d9d9d9;
-  --color-ring: #cd8401;
-
-  /* Typography scale */
-  --font-size-t1: 96px;
-  --font-size-t2: 36px;
-  --font-size-text: 24px;
 }
 
-@layer base {
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-back);
   }
 
-  * {
-    border-color: var(--color-border);
-  }
 
   button {
     cursor: pointer;

@@ -138,7 +138,7 @@ const Contact = () => (
                     <Checkbox className="bg-background" id="acceptTerms" />
                     <Label className="gap-0" htmlFor="acceptTerms">
                       You agree to our
-                      <Link className="ml-1 underline" href="#">
+                      <Link className="ml-1 underline" href="/terminos">
                         terms and conditions
                       </Link>
                       <span>.</span>
