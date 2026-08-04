@@ -14,13 +14,15 @@ const plans = [
     name: "Free for Life",
     price: 0,
     description:
-      "Perfect for individuals getting started. No credit card required.",
+        "Ideal para profesionales que están empezando. Sin necesidad de tarjeta de crédito.",
     features: [
-      "Tiempo de entrega: 5 horas",
-      "20 retratos IA",
-      "2 estilos a elegir",
-      "2 filtros a elegir",
-      "2 créditos de retoque",
+      "1 Usuario Técnico + 1 Administrador",
+      "500 MB de Almacenamiento de evidencias",
+      "4 Reportes y envíos por semana",
+      "Registro Offline (Sin Internet)",
+      "Firma Digital incluida",
+      "2 Plantillas de documentos y formularios",
+      "Soporte por Correo",
     ],
     buttonText: "Try Free",
   },
@@ -29,13 +31,15 @@ const plans = [
     price: 175,
     isRecommended: true,
     description:
-      "The full Qontrol experience for professionals who want a true partner in their work.",
+        "La experiencia completa de Qontrol para profesionales que buscan un verdadero aliado en su trabajo.",
     features: [
-      "Tiempo de entrega: 3 horas",
-      "50 retratos IA",
-      "5 estilos a elegir",
-      "5 filtros a elegir",
-      "5 créditos de retoque",
+      "Usuarios Técnicos ilimitados",
+      "Almacenamiento de evidencias ilimitado",
+      "Reportes y envíos por correo ilimitados",
+      "Dashboard de productividad con exportación a PDF",
+      "Descarga masiva de evidencias en ZIP (Excel + PDF)",
+      "Plantillas ilimitadas de documentos y formularios",
+      "Firma Digital e Historial de Auditoría",
     ],
     buttonText: "Try Free",
     isPopular: true,
@@ -44,13 +48,15 @@ const plans = [
     name: "Corporate",
     price: 450,
     description:
-      "For growing teams that want shared intelligence, role-based access, and centralized control.",
+        "Para equipos en crecimiento que necesitan optimizar tiempos, organizar evidencias y escalar sus operaciones.",
     features: [
-      "Tiempo de entrega: 1 hora",
-      "100 retratos IA",
-      "10 estilos a elegir",
-      "10 filtros a elegir",
-      "10 créditos de retoque",
+      "Todo lo incluido en el plan Primary",
+      "3 Usuarios Administradores incluidos",
+      "Soporte prioritario por WhatsApp + Correo",
+      "Marca blanca personalizada en documentos",
+      "Descarga masiva e integración Cloud",
+      "Configuración inicial y setup 100% incluido",
+      "Capacitación remota para tu equipo incluida",
     ],
     buttonText: "Try Free",
   },
@@ -92,7 +98,7 @@ const Pricing = () => {
               )}
               <h3 className="font-medium text-lg">{plan.name}</h3>
               <p className="mt-4 font-satoshi font-semibold text-4xl">
-                ${plan.price}
+                ${plan.price} USD
               </p>
               <p className="mt-4 text-muted-foreground">{plan.description}</p>
               <Separator className="my-6" />

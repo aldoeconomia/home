@@ -6,34 +6,34 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "¿Puedo cambiar de plan en cualquier momento?",
+    question: "¿El plan gratuito tiene límite de tiempo?",
     answer:
-      "Sí, puedes mejorar o reducir tu plan en cualquier momento. Los cambios surtirán efecto inmediatamente.",
+        "No, el plan Free for Life es gratis para siempre y no requiere tarjeta de crédito. Incluye 1 usuario técnico, 1 administrador, 500 MB de almacenamiento y hasta 4 reportes por semana para que comiences sin prisa.",
   },
   {
-    question: "¿Qué si necesito más retratos?",
+    question: "¿Puedo cambiar de plan si mi equipo crece?",
     answer:
-      "Puedes agregar retratos adicionales a tu plan en cualquier momento. Contacta a nuestro equipo de soporte para paquetes personalizados.",
+        "Sí, totalmente. Puedes hacer upgrade o downgrade de tu plan en cualquier momento desde tu panel de control. Si decides subir de plan, la diferencia se ajustará automáticamente a tu facturación.",
   },
   {
-    question: "¿Hay cargos ocultos?",
+    question: "¿Tienen algún descuento si pago de forma anual?",
     answer:
-      "No, no hay cargos ocultos. El precio que ves es el precio que pagas. Todas las características están incluidas.",
+        "Sí, al elegir el pago anual ahorras 2 meses completos de suscripción. El plan Primary pasa de $175 USD a $140 USD/mes ($1,720 USD al año) y el plan Corporate pasa de $450 USD a $375 USD/mes ($4,500 USD al año).",
   },
   {
-    question: "¿Puedo cancelar mi suscripción?",
+    question: "¿Qué pasa si necesito administradores adicionales?",
     answer:
-      "Sí, puedes cancelar en cualquier momento sin penalizaciones. Tu acceso continúa hasta el final de tu período de facturación.",
+        "Si estás en el plan Primary puedes agregar usuarios administradores extra por $20.00 USD/mes cada uno. En el plan Corporate el costo preferencial por administrador extra es de solo $9.00 USD/mes (además de los 3 que ya vienen incluidos).",
   },
   {
-    question: "¿Ofrecen reembolsos?",
+    question: "¿Cobran costo de instalación o configuración inicial?",
     answer:
-      "Ofrecemos una garantía de devolución de dinero de 7 días si no estás satisfecho con nuestro servicio.",
+        "En los planes Free y Primary puedes empezar de inmediato por tu cuenta. Si deseas que nuestro equipo realice la configuración inicial o capacite a tu personal en Primary, ofrecemos la sesión por $90.00 USD. En el plan Corporate, la configuración inicial y capacitación están 100% incluidas sin costo extra.",
   },
   {
-    question: "¿Hay una prueba gratuita?",
+    question: "¿Hay plazos forzosos o puedo cancelar cuando quiera?",
     answer:
-      "Sí, ofrecemos una prueba gratuita de 14 días para nuevos usuarios. No se requiere tarjeta de crédito para comenzar.",
+        "Sin contratos forzosos. Puedes cancelar tu suscripción mensual en cualquier momento sin penalizaciones. Conservarás el acceso a la plataforma y a tus evidencias hasta el final del periodo que ya hayas pagado.",
   },
 ];
 
