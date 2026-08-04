@@ -24,8 +24,7 @@ const Footer = () => {
     {
       title: "Soluciones",
       items: [
-        { href: "/#producto", label: "Productos" },
-        { href: "/blog", label: "Forms" },
+        { href: "/forms", label: "Forms" },
       ],
     },
     {
@@ -33,15 +32,19 @@ const Footer = () => {
       items: [
         { href: "/", label: "Inicio" },
         { href: "/pricing", label: "Precios" },
-        { href: "mailto:sales@theqontrol.com", label: "Contacto" },
+        { href: "/contacto", label: "Contacto" },
+        { href: "/grupo-codiaz", label: "Grupo Codiaz" },
+        { href: "/404", label: "404" },
+        { href: "/blog", label: "Blog" },
       ],
     },
     {
       title: "Legal",
       items: [
         { href: "/#terms", label: "Términos y servicio" },
-        { href: "/#security-compliance", label: "Security compliance" },
         { href: "/#privacy", label: "Política de privacidad" },
+        { href: "/#security-compliance", label: "Cumplimiento de Seguridad" },
+        { href: "/#marca", label: "Uso de Marca" },
       ],
     },
   ];
@@ -94,10 +97,10 @@ const Footer = () => {
           {/* Separador e información inferior */}
           <div className="pt-8 mt-12 border-t border-border/60 flex flex-col gap-6 md:flex-row md:items-center md:justify-between text-center md:text-left">
             <p className="text-xs text-muted-foreground max-w-xl leading-relaxed">
-              <strong className="block mb-1 text-foreground/90 font-bold italic ">
-                "Hay que quitarse la actitud de que los mexicanos no podemos ser los mejores del mundo." — Lorenzo Zambrano
+              <strong className="block mb-1 text-foreground/90 font-bold ">
+                Qontrol&reg; - Hecho en México
               </strong>
-              Copyright &copy; {new Date().getFullYear()}{' '}QONTROL&reg;. All rights reserved. QONTROL is a registered trademark and product of GRUPO CODIAZ.
+              Copyright &copy; {new Date().getFullYear()}{' '}QONTROL&reg;. Todos los derechos reservados.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center md:justify-end">

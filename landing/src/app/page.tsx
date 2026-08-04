@@ -3,10 +3,11 @@ import { CallToAction } from "@/components/calltoaction";
 import Stats from "@/components/stats";
 import Footer from "@/components/footer";
 
+
 export default function Home() {
   return (
     <>
-      <main>
+        <main className="w-full pt-20">
         <Hero />
         <Stats />
         <CallToAction />

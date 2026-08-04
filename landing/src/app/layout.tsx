@@ -3,14 +3,14 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
   subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
   title: "Qontrol | Sistema de Gestión de Activos Normativos e Inspecciones",
   description:
-      "La plataforma que escala con tu operación Qontrol gestiona tus documentos, cumplimiento y flujos de trabajo para que tu equipo se enfoque en lo que realmente importa.",
+      "La plataforma que escala con tu operación. Qontrol gestiona tus documentos, cumplimiento y flujos de trabajo para que tu equipo se enfoque en lo que realmente importa.",
   keywords: [
     "gestión de activos normativos",
     "software de inspecciones industriales",
@@ -27,18 +27,18 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "public/icon/logo.svg",
+    icon: "/icon/logo.svg", // Corrección: la carpeta "public" se omite en la URL
   },
 };
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+      <html lang="es" suppressHydrationWarning>
       <body className={`${montserrat.className} antialiased`}>{children}</body>
-    </html>
+      </html>
   );
 }

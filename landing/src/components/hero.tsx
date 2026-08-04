@@ -4,25 +4,35 @@ import { Button } from "@/components/ui/button";
 import Navbar from "./navbar";
 import HeroImage from "./heroImage";
 import TextLoop from "./text-loop";
-
+import Banner from "@/components/banner";
 
 const Hero = () => {
-  return (
-      <section className="relative min-h-screen w-full overflow-hidden bg-white rounded-none">
-        {/* 1. Imagen de Fondo + Capa de Oscuridad */}
-        <div className="absolute inset-0 z-0 h-full w-full rounded-none">
-          <HeroImage />
-          <div className="absolute inset-0 " />
-        </div>
+return (
+    /* Contenedor EXTERNO: w-full para ocupar todo el ancho real del navegador */
+    <section className="relative min-h-[calc(100vh-5rem)] w-full overflow-hidden bg-black">
 
-        {/* 2. Capa de Contenido */}
-        <div className="relative z-20 flex flex-col min-h-screen w-full">
-          <Navbar />
+      {/* 1. Fondo e Imagen (Ocupan el 100% absoluto de la pantalla) */}
+      <div className="absolute inset-0 z-0 h-full w-full">
+        <HeroImage />
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* 2. Contenido INTERNO: max-w-7xl mx-auto (Igual que el <nav> de tu Navbar) */}
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col items-center justify-center px-4 py-12 text-center">
+          {/* Solo la navegación va en el Header */}
+          <header className="relative z-30 w-full">
+            <Navbar />
+          </header>
 
           {/* Contenedor Principal Centrado */}
-          <div className="flex flex-1 flex-col items-start md:items-center justify-center pt-16 md:pt-20 px-10 md:px-20 lg:px-32 w-full">
+          <div className="flex flex-1 flex-col items-center justify-center px-6 md:px-20 lg:px-32 w-full py-12">
 
-            {/* Mobile: Solo description con TextLoop */}
+            {/* MOVIDO AQUÍ: El Banner ahora vive junto al contenido principal */}
+            <div className="mb-6">
+              <Banner />
+            </div>
+
+            {/* Mobile */}
             <div className="md:hidden mt-0 max-w-full">
               <div className="text-5xl sm:text-6xl text-white flex flex-wrap items-center gap-x-2 gap-y-2 text-left font-bold max-w-full leading-tight">
                 <span>La plataforma donde la seguridad se vuelve</span>
@@ -34,9 +44,9 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Desktop: Todo centrado en un solo contenedor */}
-            <div className="hidden md:flex md:flex-col md:items-center text-center w-full max-w-5xl mx-auto ">
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 ">
+            {/* Desktop */}
+            <div className="hidden md:flex md:flex-col md:items-center text-center w-full max-w-5xl mx-auto">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8">
                 La plataforma que escala <span className="text-primary">con tu operación</span>
               </h2>
 
@@ -55,7 +65,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Botón Desktop */}
               <div className="mt-8">
                 <Button
                     className="h-10 px-6 text-base font-bold uppercase tracking-widest"

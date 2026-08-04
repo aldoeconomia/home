@@ -26,11 +26,9 @@ function Stats() {
     <section className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-8 md:mb-12">
         <h2 className="font-montserrat text-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-black">
-          Resultados
+          Datos y cifras
         </h2>
-        <p className="mt-2 text-black/60 text-sm md:text-lg text-center">
-          Métricas clave que muestran el impacto de la plataforma.
-        </p>
+
       </div>
 
       <LazyMotion features={domAnimation}>
