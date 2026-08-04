@@ -12,9 +12,6 @@ export default function Home() {
       <main>
         <Hero />
         <Stats />
-        <HoverCardSection />
-        <ComparisonTable />
-        <ImageBuilding />
         <CallToAction />
       </main>
       <Footer />

@@ -1,10 +1,7 @@
 import Link from "next/link";
-import { messages } from "@/lib/messages";
 import Image from "next/image";
 
 const Footer = () => {
-  const t = messages.footer;
-
   const socialLinks = [
     {
       src: "/icon/instagram.svg",
@@ -30,10 +27,10 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <blockquote className="max-w-3xl mb-6 mx-auto md:mx-0">
             <p className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4">
-              {t.quote}
+              Hay que quitarse la actitud de que los mexicanos no podemos ser los mejores del mundo.
             </p>
             <footer className="text-muted-foreground text-sm">
-              — {t.quoteAuthor}
+              — Lorenzo Zambrano
             </footer>
           </blockquote>
 
@@ -68,20 +65,20 @@ const Footer = () => {
                 href="/#terms"
                 className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                {t.terms}
+                Términos
               </Link>
               <Link
                 href="/#privacy"
                 className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
-                {t.privacy}
+                Privacidad
               </Link>
             </div>
             <Link
               href="mailto:sales@theqontrol.com"
               className="flex items-center gap-2 text-primary font-semibold text-xs md:text-sm hover:text-primary/80 transition-colors duration-200"
             >
-              <span>{t.support}</span>
+              <span>¿Te apoyamos en algo?</span>
               <Image
                 src="/icon/support.svg"
                 alt="Support"
@@ -93,8 +90,7 @@ const Footer = () => {
           </div>
 
           <p className="text-xs text-muted-foreground text-center md:text-left">
-            Copyright &copy; {new Date().getFullYear()} QONTROL. All rights
-            reserved.
+            Copyright &copy;{" "}{new Date().getFullYear()}{" "}QONTROL&reg;. All rights reserved. QONTROL is a registered trademark and product of GRUPO CODIAZ.
           </p>
         </div>
       </div>

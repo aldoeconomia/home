@@ -36,6 +36,7 @@ export async function getPosts() {
         image,
         body
       }`,
+      {},
     );
     return posts;
   } catch (error) {

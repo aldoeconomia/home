@@ -7,8 +7,8 @@ export const revalidate = 0; // Sin caché, siempre datos frescos
 export default function BlogPage() {
   return (
     <>
-      <Navbar variant="page" />
-      <main className="min-h-screen bg-white dark:bg-slate-950 pt-20">
+      <Navbar />
+      <main className="min-h-screen bg-white pt-20">
         <BlogPosts />
       </main>
       <Footer />

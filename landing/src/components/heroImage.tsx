@@ -11,6 +11,7 @@ const HeroImage = () => (
       width: "100%",
       height: "100%",
       overflow: "visible",
+        filter: "brightness(25%)",
     }}
   >
     <Image

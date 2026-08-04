@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-const Logo1 = () => (
-  <Image src="/icon/logo1.svg" width={35} height={35} alt="Logo" />
+export const Logo1 = () => (
+    <Image
+        src="/icon/logo.svg"
+        width={120} // Ajusta el ancho al tamaño deseado
+        height={40}  // Ajusta la altura al tamaño deseado
+        alt="Logo"
+        priority
+    />
 );
-
-const Logo2 = () => (
-  <Image src="/icon/logo2.svg" width={35} height={35} alt="Logo" />
-);
-
-export { Logo1, Logo2 };

@@ -14,8 +14,8 @@ export default async function PostPage({
   const { slug } = await params;
   return (
     <>
-      <Navbar variant="page" />
-      <main className="min-h-screen bg-white dark:bg-slate-950">
+      <Navbar />
+      <main className="min-h-screen bg-white">
         <BlogPost slug={slug} />
       </main>
     </>

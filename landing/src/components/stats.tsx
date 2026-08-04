@@ -1,25 +1,23 @@
 "use client";
-import { messages } from "@/lib/messages";
+
 import { LazyMotion, domAnimation, m } from "motion/react";
 import { cn } from "@/lib/utils";
 
 function Stats() {
-  const t = messages.stats;
-
   const statsData = [
     {
       value: "97.33%",
-      label: t.timeSaved,
+      label: "Tiempo ahorrado",
       bgColor: "bg-[var(--color-primary)]",
     }, // Verde
     {
       value: "5X",
-      label: t.productivity,
+      label: "Productividad",
       bgColor: "bg-[var(--color-secondary)]",
     }, // Amarillo
     {
       value: "98%",
-      label: t.satisfaction,
+      label: "Satisfacción",
       bgColor: "bg-[var(--color-accent)]",
     }, // Azul
   ];
@@ -28,10 +26,10 @@ function Stats() {
     <section className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-8 md:mb-12">
         <h2 className="font-montserrat text-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-black">
-          {t.title}
+          Resultados
         </h2>
         <p className="mt-2 text-black/60 text-sm md:text-lg text-center">
-          {t.subtitle}
+          Métricas clave que muestran el impacto de la plataforma.
         </p>
       </div>
 

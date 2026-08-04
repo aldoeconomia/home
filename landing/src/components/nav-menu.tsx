@@ -11,7 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "../components/ui/navigation-menu";
 import { cn } from "../lib/utils";
-import { messages } from "@/lib/messages";
+
 
 const linkKeys = [
   { href: "/", key: "home" },
@@ -27,7 +27,6 @@ export const NavMenu = ({
   ...props
 }: ComponentProps<typeof NavigationMenu> & { isScrolled?: boolean }) => {
   const pathname = usePathname();
-  const t = messages.nav;
 
   return (
     <NavigationMenu {...props} className={cn(className)}>
@@ -52,8 +51,8 @@ export const NavMenu = ({
                   "focus:outline-none", // Quita el borde de enfoque si te molesta
                   {
                     "text-destructive": isActive,
-                    " dark:text-white": !isActive && isScrolled,
-                    "text-white": !isActive && !isScrolled,
+                    "text-foreground": !isActive && isScrolled,
+                    "text-foreground/80": !isActive && !isScrolled,
                     "text-xl": orientation === "vertical",
                   },
                 )}
@@ -65,7 +64,13 @@ export const NavMenu = ({
                       isActive,
                   })}
                 >
-                  {t[link.key as keyof typeof t]}
+                  {link.key === "home"
+                    ? "Inicio"
+                    : link.key === "product"
+                      ? "Producto"
+                      : link.key === "pricing"
+                        ? "Precios"
+                        : "Blog"}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
