@@ -11,10 +11,10 @@ import { FrequentlyAskedQuestions } from "@/components/faq";
 
 const plans = [
   {
-    name: "Inicio",
-    price: 19,
+    name: "Free for Life",
+    price: 0,
     description:
-      "Obtén 20 retratos generados por IA con 2 estilos y filtros únicos.",
+      "Perfect for individuals getting started. No credit card required.",
     features: [
       "Tiempo de entrega: 5 horas",
       "20 retratos IA",
@@ -22,14 +22,14 @@ const plans = [
       "2 filtros a elegir",
       "2 créditos de retoque",
     ],
-    buttonText: "Comprar ahora",
+    buttonText: "Try Free",
   },
   {
-    name: "Avanzado",
-    price: 29,
+    name: "Primary",
+    price: 175,
     isRecommended: true,
     description:
-      "Obtén 50 retratos generados por IA con 5 estilos y filtros únicos.",
+      "The full Qontrol experience for professionals who want a true partner in their work.",
     features: [
       "Tiempo de entrega: 3 horas",
       "50 retratos IA",
@@ -37,14 +37,14 @@ const plans = [
       "5 filtros a elegir",
       "5 créditos de retoque",
     ],
-    buttonText: "Comprar ahora",
+    buttonText: "Try Free",
     isPopular: true,
   },
   {
-    name: "Premium",
-    price: 49,
+    name: "Corporate",
+    price: 450,
     description:
-      "Obtén 100 retratos generados por IA con 10 estilos y filtros únicos.",
+      "For growing teams that want shared intelligence, role-based access, and centralized control.",
     features: [
       "Tiempo de entrega: 1 hora",
       "100 retratos IA",
@@ -52,7 +52,7 @@ const plans = [
       "10 filtros a elegir",
       "10 créditos de retoque",
     ],
-    buttonText: "Comprar ahora",
+    buttonText: "Try Free",
   },
 ];
 

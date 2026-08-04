@@ -13,10 +13,10 @@ export function CallToAction() {
           {/* Contenido izquierdo */}
           <div className="flex-1 p-6 md:p-12 text-white z-10 flex flex-col justify-center pl-6 md:pl-12">
             <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight mb-2">
-              ¿Listo para empezar?
+              Hecho para el trabajo real
             </h2>
             <p className="text-sm md:text-base mb-4 leading-relaxed">
-              Agenda una demo y conoce cómo Qontrol puede ayudarte a operar mejor.
+              Únete a los aliados que ya usan Qontrol en su día a día. Configúralo en minutos. Cancela cuando quieras.
             </p>
             <div className="w-fit">
               <Button
@@ -28,7 +28,7 @@ export function CallToAction() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Quiero una demo
+                  Try Free
                 </Link>
               </Button>
             </div>

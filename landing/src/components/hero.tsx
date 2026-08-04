@@ -67,7 +67,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                   >
-                    Comenzar ahora <ArrowUpRight className="ml-2 h-5 w-5" />
+                    Try Free <ArrowUpRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
               </div>

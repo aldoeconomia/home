@@ -38,7 +38,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                  Solicitar demo <ArrowUpRight />
+                  Try Free <ArrowUpRight />
                 </Link>
               </Button>
               <Button
