@@ -8,18 +8,18 @@ function Stats() {
     {
       value: "97.33%",
       label: "Tiempo ahorrado",
-      bgColor: "bg-[var(--color-primary)]",
-    }, // Verde
+      bgColor: "bg-blue",
+    },
     {
       value: "5X",
       label: "Productividad",
-      bgColor: "bg-[var(--color-secondary)]",
-    }, // Amarillo
+      bgColor: "bg-orange",
+    },
     {
       value: "98%",
       label: "Satisfacción",
-      bgColor: "bg-[var(--color-accent)]",
-    }, // Azul
+      bgColor: "bg-brand",
+    },
   ];
 
   return (

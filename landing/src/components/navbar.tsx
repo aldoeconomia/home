@@ -10,7 +10,7 @@ import { NavMenu } from "./nav-menu";
 import { Logo1 } from "./logo";
 
 const Navbar = () => {
-  const bgClass = "bg-white  shadow-sm text-foreground";
+  const bgClass = "bg-back  shadow-sm text-foreground";
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>
@@ -29,9 +29,9 @@ const Navbar = () => {
 
           {/* Lado Derecho: Acciones y menú móvil */}
           <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
-            <Button asChild className="bg-primary text-white">
+            <Button asChild className="bg-brand text-white">
               <Link
-                  href="https://onboarding.theqontrol.com/"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1"
@@ -56,12 +56,12 @@ const Navbar = () => {
 
             {/* Menú Móvil */}
             <Popover>
-              <PopoverTrigger className="group md:hidden p-2 rounded-md hover:bg-accent focus:outline-none flex items-center justify-center">
+              <PopoverTrigger className="group md:hidden p-2 rounded-md hover:bg-back focus:outline-none flex items-center justify-center">
                 <Menu className="h-6 w-6 group-data-[state=open]:hidden" />
                 <X className="h-6 w-6 hidden group-data-[state=open]:block" />
               </PopoverTrigger>
               <PopoverContent
-                  className="h-[calc(100svh-5rem)] w-screen rounded-none border-none bg-background"
+                  className="h-[calc(100svh-5rem)] w-screen rounded-none border-none bg-back"
                   sideOffset={16}
               >
                 <NavMenu orientation="vertical" isScrolled={true} />

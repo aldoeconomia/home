@@ -39,7 +39,7 @@ return (
                 <TextLoop
                     staticText=""
                     rotatingTexts={["inteligente", "colaborativa", "rentable"]}
-                    className="text-primary font-bold text-5xl sm:text-6xl"
+                    className="text-brand font-bold text-5xl sm:text-6xl"
                 />
               </div>
             </div>
@@ -47,7 +47,7 @@ return (
             {/* Desktop */}
             <div className="hidden md:flex md:flex-col md:items-center text-center w-full max-w-5xl mx-auto">
               <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8">
-                La plataforma que escala <span className="text-primary">con tu operación</span>
+                La plataforma que escala <span className="text-brand">con tu operación</span>
               </h2>
 
               <div className="space-y-3 w-full">
@@ -60,19 +60,19 @@ return (
                   <TextLoop
                       staticText=""
                       rotatingTexts={["inteligente", "colaborativa", "rentable"]}
-                      className="text-primary font-bold text-base md:text-lg"
+                      className="text-brand font-bold text-base md:text-lg"
                   />
                 </div>
               </div>
 
               <div className="mt-8">
                 <Button
-                    className="h-10 px-6 text-base font-bold uppercase tracking-widest"
+                    className="h-10 px-6 text-base font-bold uppercase tracking-widest bg-brand text-white"
                     size="sm"
                     asChild
                 >
                   <Link
-                      href="https://onboarding.theqontrol.com/"
+                      href=""
                       target="_blank"
                       rel="noopener noreferrer"
                   >

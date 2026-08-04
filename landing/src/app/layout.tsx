@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/icon/logo.svg", // Corrección: la carpeta "public" se omite en la URL
+    icon: "/icon/logo.svg",
   },
 };
 
@@ -37,8 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html lang="es" suppressHydrationWarning>
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <html lang="es" className={montserrat.variable} suppressHydrationWarning>
+      <body className={`${montserrat.className} antialiased`}>
+      {children}
+      </body>
       </html>
   );
 }
