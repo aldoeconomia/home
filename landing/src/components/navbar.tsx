@@ -10,7 +10,7 @@ import { NavMenu } from "./nav-menu";
 import { Logo1 } from "./logo";
 
 const Navbar = () => {
-  const bgClass = "bg-back  shadow-sm text-foreground";
+  const bgClass = "bg-white shadow-sm text-black";
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>

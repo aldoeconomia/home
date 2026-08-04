@@ -50,7 +50,7 @@ const Footer = () => {
   ];
 
   return (
-      <footer className="relative z-10 bg-background px-6 py-12 ">
+      <footer className="relative z-10 bg-back px-6 py-12 ">
         <div className="mx-auto w-full max-w-7xl">
           {/* Grid Principal: 1 col en celular, 2 en tablet pequeña, 4 columnas en desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr] gap-8 lg:gap-12 items-start">
@@ -67,7 +67,7 @@ const Footer = () => {
                     priority
                 />
               </Link>
-              <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-sm md:text-base text-black leading-relaxed">
                 La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación. Creada para las empresas que impulsan la industria de hoy.
               </p>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
             {/* Secciones de Links */}
             {tabs.map((section) => (
                 <div key={section.title} className="text-center sm:text-left">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-foreground">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-black">
                     {section.title}
                   </h3>
                   <ul className="mt-4 space-y-2.5">
@@ -83,7 +83,7 @@ const Footer = () => {
                         <li key={item.label}>
                           <Link
                               href={item.href}
-                              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                              className="text-sm text-black hover:text-black/80 transition-colors duration-200"
                           >
                             {item.label}
                           </Link>
@@ -96,8 +96,8 @@ const Footer = () => {
 
           {/* Separador e información inferior */}
           <div className="pt-8 mt-12 border-t border-border/60 flex flex-col gap-6 md:flex-row md:items-center md:justify-between text-center md:text-left">
-            <p className="text-xs text-muted-foreground max-w-xl leading-relaxed">
-              <strong className="block mb-1 text-foreground/90 font-bold ">
+            <p className="text-xs text-black max-w-xl leading-relaxed">
+              <strong className="block mb-1 text-black font-bold ">
                 Qontrol&reg; - Hecho en México
               </strong>
               Copyright &copy; {new Date().getFullYear()}{' '}QONTROL&reg;. Todos los derechos reservados.
@@ -111,7 +111,7 @@ const Footer = () => {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                        className="text-black hover:text-black/80 transition-colors p-1"
                         aria-label={label}
                     >
                       <Image
@@ -127,7 +127,7 @@ const Footer = () => {
 
               <Link
                   href="mailto:support@theqontrol.com"
-                  className="flex items-center gap-2 text-primary font-semibold text-xs md:text-sm "
+                  className="flex items-center gap-2 text-brand font-semibold text-xs md:text-sm "
               >
                 <span>¿Te apoyamos en algo?</span>
                 <Image
