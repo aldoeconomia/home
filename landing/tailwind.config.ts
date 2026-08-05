@@ -35,7 +35,7 @@ const config: Config = {
                     back: "#dbc293"
                 },
                 red: "#fb1c0a",
-                success: "#c5e1c7",
+                success: "#43A047",
                 error: "#fb3858",
             }
         },

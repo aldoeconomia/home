@@ -71,7 +71,7 @@ const Pricing = () => {
           <h2 className="text-center font-medium text-3xl sm:text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
             Nuestros Planes
           </h2>
-          <p className="mt-3 text-center text-muted-foreground text-xl -tracking-[0.01em] md:text-2xl">
+          <p className="mt-3 text-center text-black text-xl tracking-[0.01em] md:text-2xl">
             Elige el plan que se ajusta a tus necesidades
           </p>
         </div>
@@ -83,24 +83,24 @@ const Pricing = () => {
           {plans.map((plan) => (
             <div
               className={cn(
-                "relative border bg-card p-6 sm:p-8 lg:p-7 lg:rounded-none lg:last:rounded-none lg:first:rounded-none h-full flex flex-col",
+                "relative border bg-white p-6 sm:p-8 lg:p-7 lg:rounded-none lg:last:rounded-none lg:first:rounded-none h-full flex flex-col",
                 {
-                  "border-primary ring-1 ring-primary ring-inset":
+                  " ring-5 ring-brand ring-inset":
                     plan.isPopular,
                 },
               )}
               key={plan.name}
             >
               {plan.isPopular && (
-                <Badge className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2">
+                <Badge className="absolute -top-3 right-1/2 translate-x-1/2 -translate-y-1/2 text-brand ">
                   Más Popular
                 </Badge>
               )}
               <h3 className="font-medium text-lg">{plan.name}</h3>
-              <p className="mt-4 font-satoshi font-semibold text-4xl">
+              <p className="mt-4 font-semibold text-4xl">
                 ${plan.price} USD
               </p>
-              <p className="mt-4 text-muted-foreground">{plan.description}</p>
+              <p className="mt-4 text-black">{plan.description}</p>
               <Separator className="my-6" />
               <ul className="space-y-3 flex-1">
                 {plan.features.map((feature) => (
@@ -108,16 +108,16 @@ const Pricing = () => {
                     className="flex items-start gap-2 text-sm sm:text-base"
                     key={feature}
                   >
-                    <CircleCheck className="mt-1 h-4 w-4 text-green-600 flex-shrink-0" />
+                    <CircleCheck className="mt-1 h-4 w-4 text-green-600 shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
               <Button
                 className={cn("mt-8 w-full text-base font-semibold", {
-                  "bg-primary text-white hover:bg-primary hover:text-white":
+                  "bg-brand text-white  hover:bg-white hover:text-brand":
                     plan.isPopular,
-                  "bg-white text-black border border-black hover:bg-white hover:text-black hover:border-black":
+                  "bg-white text-black border-black hover:bg-white hover:text-black hover:border-white":
                     !plan.isPopular,
                 })}
                 size="lg"

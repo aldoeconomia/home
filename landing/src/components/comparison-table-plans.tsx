@@ -116,7 +116,7 @@ export const COMPARISON_SECTIONS: ComparisonSection[] = [
         premium: true,
       },
       {
-        feature: "Historial de Auditoría / Trackeo de Correos",
+        feature: "Historial de Auditoría / Seguimiento de Correos",
         starter: false,
         advanced: true,
         premium: true,
@@ -192,49 +192,49 @@ export function ComparisonTablePlans() {
       <section className="bg-white py-20 sm:py-24 md:py-32 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-12 md:gap-16">
           {/* Title block */}
-          <div className="mx-auto flex flex-col items-center text-center md:max-w-3xl hidden md:flex">
+          <div className="mx-auto flex-col items-center text-center md:max-w-3xl hidden md:flex">
             <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.04em] mb-4">
               Comparar Planes
             </h2>
-            <p className="text-muted-foreground text-lg md:text-xl">
+            <p className="text-black text-lg md:text-xl">
               Revisa las características incluidas en cada plan y elige el que
               mejor se adapte a tus necesidades.
             </p>
           </div>
 
           {/* Table */}
-          <div className="hidden md:block border rounded-lg overflow-hidden shadow-sm">
-            <Table className="w-full bg-white">
-              <TableHeader className="bg-white">
-                <TableRow className="h-20 border-b bg-white">
-                  <TableHead className="w-[30%] text-base font-bold py-4 px-6 text-black">
+          <div className="hidden md:block overflow-hidden">
+            <Table className="w-full bg-white border-0 [&_tr]:border-b-0">
+              <TableHeader className="bg-white [&_tr]:border-b-0">
+                <TableRow className="h-20 bg-white border-b-0 hover:bg-transparent">
+                  <TableHead className="w-[30%] text-base font-bold py-4 px-6 text-black border-0">
                     Características
                   </TableHead>
-                  <TableHead className="w-[23%]">
+                  <TableHead className="w-[23%] border-0">
                     <div className="flex items-center justify-center">
                       <Button
                           variant="outline"
-                          className="w-full h-12 text-sm text-black border-black font-semibold"
+                          className="w-full h-12 text-sm text-black font-semibold"
                       >
                         Free for Life
                       </Button>
                     </div>
                   </TableHead>
-                  <TableHead className="w-[23%]">
+                  <TableHead className="w-[23%] border-0">
                     <div className="flex items-center justify-center">
                       <Button
                           variant="default"
-                          className="w-full h-12 text-sm text-white bg-primary font-semibold"
+                          className="w-full h-12 text-sm text-white bg-brand font-semibold"
                       >
                         Primary
                       </Button>
                     </div>
                   </TableHead>
-                  <TableHead className="w-[24%]">
+                  <TableHead className="w-[24%] border-0">
                     <div className="flex items-center justify-center">
                       <Button
                           variant="outline"
-                          className="w-full h-12 text-sm text-black border-black font-semibold"
+                          className="w-full h-12 text-sm text-black font-semibold"
                       >
                         Corporate
                       </Button>
@@ -246,10 +246,10 @@ export function ComparisonTablePlans() {
                 {COMPARISON_SECTIONS.map((section, sectionIdx) => (
                     <React.Fragment key={`section-${sectionIdx}`}>
                       {/* Encabezado de la categoría */}
-                      <TableRow className="bg-slate-100/80 border-y">
+                      <TableRow className="border-b-0 hover:bg-transparent">
                         <TableCell
                             colSpan={4}
-                            className="py-3 px-6 text-xs font-bold uppercase text-slate-700 tracking-wider"
+                            className="py-3 px-6 text-xs font-bold uppercase tracking-wider border-0"
                         >
                           {section.title}
                         </TableCell>
@@ -259,29 +259,29 @@ export function ComparisonTablePlans() {
                       {section.rows.map((row, rowIdx) => (
                           <TableRow
                               key={`row-${sectionIdx}-${rowIdx}`}
-                              className="h-16 border-b hover:bg-slate-50/50"
+                              className="h-16 border-b-0 hover:bg-transparent"
                           >
-                            <TableCell className="text-sm font-medium py-4 px-6 text-slate-900">
+                            <TableCell className="text-sm font-medium py-4 px-6 border-0">
                               {row.feature}
                             </TableCell>
 
                             {/* Starter */}
-                            <TableCell className="py-4">
+                            <TableCell className="py-4 border-0">
                               <div className="flex items-center justify-center text-center text-sm">
                                 {typeof row.starter === "boolean" ? (
                                     row.starter ? (
                                         <Check
-                                            className="size-5 text-green-600"
+                                            className="size-5 text-success"
                                             aria-hidden="true"
                                         />
                                     ) : (
                                         <X
-                                            className="size-5 text-slate-400"
+                                            className="size-5 text-error"
                                             aria-hidden="true"
                                         />
                                     )
                                 ) : (
-                                    <span className="font-normal text-slate-700">
+                                    <span className="font-normal text-black">
                               {row.starter}
                             </span>
                                 )}
@@ -289,22 +289,22 @@ export function ComparisonTablePlans() {
                             </TableCell>
 
                             {/* Advanced */}
-                            <TableCell className="py-4">
+                            <TableCell className="py-4 border-0">
                               <div className="flex items-center justify-center text-center text-sm">
                                 {typeof row.advanced === "boolean" ? (
                                     row.advanced ? (
                                         <Check
-                                            className="size-5 text-green-600"
+                                            className="size-5 text-success"
                                             aria-hidden="true"
                                         />
                                     ) : (
                                         <X
-                                            className="size-5 text-slate-400"
+                                            className="size-5 text-error"
                                             aria-hidden="true"
                                         />
                                     )
                                 ) : (
-                                    <span className="font-normal text-slate-700">
+                                    <span className="font-normal text-black">
                               {row.advanced}
                             </span>
                                 )}
@@ -312,22 +312,22 @@ export function ComparisonTablePlans() {
                             </TableCell>
 
                             {/* Premium */}
-                            <TableCell className="py-4">
+                            <TableCell className="py-4 border-0">
                               <div className="flex items-center justify-center text-center text-sm">
                                 {typeof row.premium === "boolean" ? (
                                     row.premium ? (
                                         <Check
-                                            className="size-5 text-green-600"
+                                            className="size-5 text-success"
                                             aria-hidden="true"
                                         />
                                     ) : (
                                         <X
-                                            className="size-5 text-slate-400"
+                                            className="size-5 text-error"
                                             aria-hidden="true"
                                         />
                                     )
                                 ) : (
-                                    <span className="font-normal text-slate-700">
+                                    <span className="font-normal text-black">
                               {row.premium}
                             </span>
                                 )}
