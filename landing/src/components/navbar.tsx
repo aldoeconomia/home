@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/popover";
 import { NavMenu } from "./nav-menu";
 import { Logo1 } from "./logo";
+import Banner from "./banner";
 
 const Navbar = () => {
   const bgClass = "bg-white shadow-sm text-black";
@@ -20,7 +21,9 @@ const Navbar = () => {
             <Link href="/" className="flex items-center">
               <Logo1 />
             </Link>
+            <Banner />
           </div>
+
 
           {/* Centro: Menú de navegación */}
           <div className="hidden md:flex flex-1 items-center justify-center">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "./navbar";
 import HeroImage from "./heroImage";
 import TextLoop from "./text-loop";
-import Banner from "@/components/banner";
+
 
 const Hero = () => {
 return (
@@ -27,10 +27,7 @@ return (
           {/* Contenedor Principal Centrado */}
           <div className="flex flex-1 flex-col items-center justify-center px-6 md:px-20 lg:px-32 w-full py-12">
 
-            {/* MOVIDO AQUÍ: El Banner ahora vive junto al contenido principal */}
-            <div className="mb-6">
-              <Banner />
-            </div>
+
 
             {/* Mobile */}
             <div className="md:hidden mt-0 max-w-full">

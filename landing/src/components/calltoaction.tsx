@@ -24,7 +24,7 @@ export function CallToAction() {
                 className="bg-orange hover:bg-secondary/90 text-white font-bold uppercase tracking-widest h-10 px-6 text-sm border-none rounded-none"
               >
                 <Link
-                  href="https://onboarding.theqontrol.com/"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                 >
