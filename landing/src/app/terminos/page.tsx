@@ -8,17 +8,17 @@ export default function Terminos() {
             <Navbar />
             <main className="w-full pt-28 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
                 {/* Fecha fija */}
-                <p className="text-center text-sm font-bold text-primary mb-2">
+                <p className="text-center text-sm font-bold text-brand mb-2">
                     Ultima Actualización: 4 de agosto de 2026
                 </p>
 
                 {/* Título */}
-                <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">
+                <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-black">
                     Términos y Condiciones
                 </h1>
 
                 {/* Contenido centrado con texto justificado */}
-                <div className="space-y-4 text-justify text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-justify text-black leading-relaxed">
                     <p>
                         Bienvenido a nuestro sitio web. Al acceder y utilizar este servicio, aceptas cumplir y estar sujeto a los siguientes términos y condiciones de uso. Te recomendamos leer detenidamente esta información antes de continuar.
                     </p>
