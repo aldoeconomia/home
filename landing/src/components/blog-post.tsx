@@ -18,7 +18,7 @@ export default async function BlogPost({ slug }: { slug: string }) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-20">
         <h1 className="text-4xl font-bold">Post no encontrado</h1>
-        <p className="text-muted-foreground mt-4">
+        <p className="text-black mt-4">
           Lo sentimos, no pudimos encontrar el post que buscabas.
         </p>
       </div>
@@ -36,7 +36,7 @@ export default async function BlogPost({ slug }: { slug: string }) {
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
             {post.title}
           </h1>
-          <time className="text-base text-muted-foreground">
+          <time className="text-base text-brand">
             {formattedDate}
           </time>
         </div>
@@ -57,7 +57,7 @@ export default async function BlogPost({ slug }: { slug: string }) {
         {/* Content */}
         <div className="max-w-4xl mx-auto px-6 pb-20 sm:pb-24">
           {post.body && (
-            <div className="prose prose-sm max-w-none prose-headings:font-bold prose-headings:text-lg prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-p:text-sm prose-p:leading-relaxed">
+            <div className="prose prose-sm max-w-none prose-headings:font-bold prose-headings:text-lg prose-a:text-brand prose-a:no-underline hover:prose-a:underline prose-p:text-sm prose-p:leading-relaxed">
               <PortableText value={post.body} />
             </div>
           )}
@@ -73,7 +73,7 @@ export default async function BlogPost({ slug }: { slug: string }) {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
           {post.title}
         </h1>
-        <time className="text-sm text-muted-foreground">{formattedDate}</time>
+        <time className="text-sm text-black">{formattedDate}</time>
       </div>
 
       {/* Content */}

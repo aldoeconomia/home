@@ -63,7 +63,7 @@ export default function BlogPosts() {
       <div className="mx-auto max-w-6xl px-6 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">No hay posts aún</h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-black text-lg">
             Vuelve pronto para leer nuevos artículos
           </p>
         </div>
@@ -98,8 +98,8 @@ function BlogView({ posts }: { posts: any[] }) {
           onClick={() => setViewMode("grid")}
           className={`gap-2 font-medium ${
             viewMode === "grid"
-              ? "bg-primary text-white"
-              : "bg-white text-black border border-black hover:bg-gray-50"
+              ? "bg-black text-white"
+              : "bg-white text-black border border-black hover:bg-brand"
           }`}
         >
           <Grid3x3 className="h-4 w-4" />
@@ -111,8 +111,8 @@ function BlogView({ posts }: { posts: any[] }) {
           onClick={() => setViewMode("list")}
           className={`gap-2 font-medium ${
             viewMode === "list"
-              ? "bg-primary text-white"
-              : "bg-white text-black border border-black hover:bg-gray-50"
+              ? "bg-black text-white"
+              : "bg-white text-black border-black hover:bg-brand"
           }`}
         >
           <List className="h-4 w-4" />
