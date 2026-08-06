@@ -97,10 +97,15 @@ const Footer = () => {
           {/* Separador e información inferior */}
           <div className="pt-8 mt-12 border-t border-border/60 flex flex-col gap-6 md:flex-row md:items-center md:justify-between text-center md:text-left">
             <p className="text-xs text-black max-w-xl leading-relaxed">
-              <strong className="block mb-1 text-black font-bold ">
-                Qontrol&reg; - Hecho en México
+              <strong className="block mb-1 text-black font-bold">
+                QONTROL&reg; - Tecnología mexicana para la inspección de extintores
               </strong>
-              Copyright &copy; {new Date().getFullYear()}{' '}QONTROL&reg;. Todos los derechos reservados.
+
+              Copyright &copy; {new Date().getFullYear()} Grupo Codiaz. Todos los derechos reservados.
+
+              <br />
+
+              QONTROL&reg; es una marca registrada en México propiedad de Grupo Codiaz.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center md:justify-end">
