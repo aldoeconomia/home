@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import JsonLd from "../components/JsonLd";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -8,26 +9,75 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Qontrol | Sistema de Gestión de Activos Normativos e Inspecciones",
+  title: {
+    default: "QONTROL | La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
+    template: "%s | QONTROL",
+  },
+
   description:
-      "La plataforma que escala con tu operación. Qontrol gestiona tus documentos, cumplimiento y flujos de trabajo para que tu equipo se enfoque en lo que realmente importa.",
+      "QONTROL es un software mexicano para digitalizar inspecciones, mantenimiento y evidencias de extintores.",
+
   keywords: [
-    "gestión de activos normativos",
-    "software de inspecciones industriales",
-    "cumplimiento NOM",
-    "cumplimiento ISO",
-    "aplicación de revisión",
-    "gestión de flujos de trabajo",
-    "digitalización de formularios industriales",
-    "mantenimientos planta industrial",
-    "Qontrol Forms",
+    "software de extintores",
+    "inspección de extintores",
+    "mantenimiento de extintores",
+    "protección contra incendios",
+    "SaaS México",
+    "seguridad industrial",
   ],
+
+  authors: [
+    {
+      name: "QONTROL",
+    },
+  ],
+
+  creator: "QONTROL",
+
+  metadataBase: new URL("https://theqontrol.com"),
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "QONTROL | Control inteligente de extintores",
+    description:
+        "Digitaliza inspecciones, evidencias y reportes de mantenimiento de extintores.",
+
+    url: "https://theqontrol.com",
+
+    siteName: "QONTROL",
+
+    locale: "es_MX",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QONTROL - Software de inspección de extintores",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "QONTROL | Digitaliza la inspección de extintores",
+    description:
+        "Software mexicano para controlar inspecciones, mantenimiento y evidencias.",
+    images: ["/og-image.png"],
+  },
+
   robots: {
     index: true,
     follow: true,
-  },
-  icons: {
-    icon: "/icon/logo.svg",
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -39,6 +89,7 @@ export default function RootLayout({
   return (
       <html lang="es" className={montserrat.variable} suppressHydrationWarning>
       <body className={`${montserrat.className} antialiased`}>
+      <JsonLd />
       {children}
       </body>
       </html>
