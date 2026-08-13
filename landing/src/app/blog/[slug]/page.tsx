@@ -54,7 +54,7 @@ export async function generateMetadata({
                 post.excerpt ||
                 "Comunicados oficiales, eventos y novedades de QONTROL.",
 
-            url: `https://theqontrol.com/blog/${slug}`,
+            url: `https://www.theqontrol.com/blog/${slug}`,
 
             siteName: "QONTROL",
 
@@ -120,7 +120,7 @@ export default async function PostPage({
                         "publisher": {
                             "@type": "Organization",
                             "name": "Grupo Codiaz",
-                            "url": "https://theqontrol.com"
+                            "url": "https://www.theqontrol.com"
                         },
 
                         "datePublished": post.publishedAt,
@@ -128,7 +128,7 @@ export default async function PostPage({
                         "mainEntityOfPage": {
                             "@type": "WebPage",
                             "@id":
-                                `https://theqontrol.com/blog/${post.slug.current}`
+                                `https://www.theqontrol.com/blog/${post.slug.current}`
                         }
                     })
                 }}
