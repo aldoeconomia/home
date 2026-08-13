@@ -2,10 +2,13 @@ import Image from "next/image";
 
 const HeroImage = () => {
     return (
-        <img
+        <Image
             src="/image/personajehero.svg"
-            alt="hero image"
-            className="h-full w-full object-cover object-center filter brightness-[0.25]"
+            alt="QONTROL Hero Background"
+            fill
+            priority // 👈 Carga inmediata para el LCP
+            sizes="100vw"
+            className="object-cover object-center filter brightness-[0.25]"
         />
     );
 };
