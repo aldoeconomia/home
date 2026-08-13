@@ -262,7 +262,6 @@ export default function Contact() {
                           <Link className="ml-1 underline" href="/terminos">
                             términos y condiciones
                           </Link>
-                          <span>.</span>
                         </Label>
                       </div>
                     </div>
