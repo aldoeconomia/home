@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "QONTROL | Control inteligente de extintores",
+    title: "QONTROL | La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
     description:
         "Digitaliza inspecciones, evidencias y reportes de mantenimiento de extintores.",
 
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
         url: "/icon/logo.svg",
         width: 1200,
         height: 630,
-        alt: "QONTROL - Software de inspección de extintores",
+        alt: "QONTROL - La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "QONTROL | Digitaliza la inspección de extintores",
+    title: "QONTROL | La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
     description:
         "Software mexicano para controlar inspecciones, mantenimiento y evidencias.",
     images: ["/icon/logo.svg"],
