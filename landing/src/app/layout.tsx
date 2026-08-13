@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
   creator: "QONTROL",
 
-  metadataBase: new URL("https://theqontrol.com"),
+  metadataBase: new URL("https://www.theqontrol.com"),
 
   alternates: {
     canonical: "/",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
         "Digitaliza inspecciones, evidencias y reportes de mantenimiento de extintores.",
 
-    url: "https://theqontrol.com",
+    url: "https://www.theqontrol.com",
 
     siteName: "QONTROL",
 
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/og-image.png",
+        url: "../public/icon/logo.svg",
         width: 1200,
         height: 630,
         alt: "QONTROL - Software de inspección de extintores",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "QONTROL | Digitaliza la inspección de extintores",
     description:
         "Software mexicano para controlar inspecciones, mantenimiento y evidencias.",
-    images: ["/og-image.png"],
+    images: ["../public/icon/logo.svg"],
   },
 
   robots: {

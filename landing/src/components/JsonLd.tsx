@@ -5,11 +5,11 @@ export default function JsonLd() {
   "@graph": [
    {
     "@type": "Organization",
-    "@id": "https://theqontrol.com/#grupo-codiaz",
+    "@id": "https://www.theqontrol.com/#grupo-codiaz",
 
     "name": "Grupo Codiaz",
 
-    "url": "https://theqontrol.com/grupo-codiaz/",
+    "url": "https://www.theqontrol.com/grupo-codiaz/",
 
     "description":
         "Grupo empresarial mexicano enfocado en desarrollo tecnológico e innovación.",
@@ -29,7 +29,7 @@ export default function JsonLd() {
    {
     "@type": "SoftwareApplication",
 
-    "@id": "https://theqontrol.com/#qontrol",
+    "@id": "https://www.theqontrol.com/#qontrol",
 
     "name": "QONTROL",
 
@@ -40,14 +40,14 @@ export default function JsonLd() {
     "description":
         "Software mexicano para digitalizar inspecciones, mantenimiento y evidencias de extintores.",
 
-    "url": "https://theqontrol.com",
+    "url": "https://www.theqontrol.com",
 
     "provider": {
-     "@id": "https://theqontrol.com/#grupo-codiaz"
+     "@id": "https://www.theqontrol.com/#grupo-codiaz"
     },
 
     "creator": {
-     "@id": "https://theqontrol.com/#grupo-codiaz"
+     "@id": "https://www.theqontrol.com/#grupo-codiaz"
     },
 
     "areaServed": {
