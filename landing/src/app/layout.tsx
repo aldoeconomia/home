@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "../public/icon/logo.svg",
+        url: "/icon/logo.svg",
         width: 1200,
         height: 630,
         alt: "QONTROL - Software de inspección de extintores",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "QONTROL | Digitaliza la inspección de extintores",
     description:
         "Software mexicano para controlar inspecciones, mantenimiento y evidencias.",
-    images: ["../public/icon/logo.svg"],
+    images: ["/icon/logo.svg"],
   },
 
   robots: {
