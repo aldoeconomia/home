@@ -13,6 +13,38 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  // 🛡️ Cabeceras de Seguridad y SEO Técnico servidas desde el Edge de Vercel
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff", // Evita que los navegadores interpreten tipos MIME incorrectos
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY", // Previene ataques de Clickjacking
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin", // Protege la privacidad del usuario en enlaces externos
+          },
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on", // Acelera la resolución de dominios en enlaces dentro de tu sitio
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload", // Fuerza el uso de HTTPS seguro
+          },
+        ],
+      },
+    ];
+  },
+
   experimental: {
     serverActions: {
       allowedOrigins: [
@@ -24,7 +56,10 @@ const nextConfig: NextConfig = {
       ],
     },
   },
+
   typescript: {
+    // ⚠️ NOTA: Útil para despliegues rápidos en desarrollo.
+    // Para producción, procura corregir los errores de tipos para evitar errores 500 en vivo que afecten el SEO.
     ignoreBuildErrors: true,
   },
 };
