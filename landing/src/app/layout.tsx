@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
+  icons: {
+    icon: "/icon/icon.svg",
+  },
+
   openGraph: {
     title: "QONTROL | La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
     description:
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/icon/logo.svg",
+        url: "/icon/icon.svg",
         width: 1200,
         height: 630,
         alt: "QONTROL - La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
@@ -68,7 +72,7 @@ export const metadata: Metadata = {
     title: "QONTROL | La plataforma para registrar, inspeccionar, gestionar formularios y hacer seguimiento a tu operación.",
     description:
         "Software mexicano para controlar inspecciones, mantenimiento y evidencias.",
-    images: ["/icon/logo.svg"],
+    images: ["/icon/icon.svg"],
   },
 
   robots: {

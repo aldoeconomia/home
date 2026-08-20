@@ -15,12 +15,18 @@ const Navbar = () => {
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>
-        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between">
+        {/* Agregamos gap-4 o gap-8 para forzar una separación mínima */}
+        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6">
+
           {/* Lado Izquierdo: Logo */}
-          <div className="flex flex-1 items-center justify-start">
+          <div className="flex items-center justify-start shrink-0">
             <Link href="/" className="flex items-center">
               <Logo1 />
             </Link>
+          </div>
+
+          {/* Lado Derecho / Centro: Banner */}
+          <div className="flex items-center">
             <Banner />
           </div>
 

@@ -61,9 +61,9 @@ const Footer = () => {
                 <Image
                     src="/icon/logo.svg"
                     alt="Qontrol Logo"
-                    width={72}
-                    height={72}
-                    className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                    width={174}
+                    height={174}
+                    className="object-contain max-w-full h-auto"
                     priority
                 />
               </Link>
