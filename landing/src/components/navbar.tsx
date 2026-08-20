@@ -15,9 +15,10 @@ const Navbar = () => {
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>
-        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-2 sm:gap-6">
+        {/* Añadimos w-full al nav para asegurar que respete los bordes de la pantalla */}
+        <nav className="mx-auto flex h-full w-full max-w-7xl items-center justify-between gap-2 sm:gap-6">
 
-          {/* Lado Izquierdo: Logo */}
+          {/* Lado Izquierdo: Logo (shrink-0 evita que el logo se aplaste) */}
           <div className="flex items-center justify-start shrink-0">
             <Link href="/" className="flex items-center scale-[0.75] sm:scale-100 origin-left transition-transform">
               <Logo1 />
@@ -25,22 +26,19 @@ const Navbar = () => {
           </div>
 
           {/* Lado Derecho / Centro: Banner */}
-          <div className="flex items-center min-w-0">
+          {/* CORRECCIÓN AQUÍ: Agregamos flex-1 y overflow-hidden */}
+          <div className="flex-1 flex items-center justify-center min-w-0 overflow-hidden">
             <Banner />
           </div>
 
           {/* Centro: Menú de navegación (Desktop) */}
-          <div className="hidden md:flex items-center justify-center">
+          <div className="hidden md:flex items-center justify-center shrink-0">
             <NavMenu isScrolled={true} />
           </div>
 
           {/* Lado Derecho: Acciones y menú móvil */}
-          {/* CAMBIOS:
-            1. justify-center en móvil, md:justify-end para escritorio.
-            2. gap-3 en móvil para separar un poco el botón del menú hamburguesa.
-            3. mr-3 sm:mr-0 para despegar todo el bloque del borde derecho en móvil.
-        */}
-          <div className="flex items-center justify-center md:justify-end gap-3 sm:gap-4 shrink-0 mr-3 sm:mr-0">
+          {/* shrink-0 asegura que este bloque nunca sea empujado ni aplastado */}
+          <div className="flex items-center justify-end gap-3 sm:gap-4 shrink-0">
 
             <Button asChild className="bg-brand text-white px-3 sm:px-4">
               <Link
