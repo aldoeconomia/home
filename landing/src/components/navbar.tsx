@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>
-        {/* Agregamos gap-4 o gap-8 para forzar una separación mínima */}
-        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-6">
+        {/* Redujimos el gap en mobile (gap-2) para que los elementos quepan mejor */}
+        <nav className="mx-auto flex h-full max-w-7xl items-center justify-between gap-2 sm:gap-6">
 
           {/* Lado Izquierdo: Logo */}
           <div className="flex items-center justify-start shrink-0">
@@ -26,26 +26,29 @@ const Navbar = () => {
           </div>
 
           {/* Lado Derecho / Centro: Banner */}
-          <div className="flex items-center">
+          {/* Usamos min-w-0 para permitir que el banner se reduzca si la pantalla es muy pequeña */}
+          <div className="flex items-center min-w-0">
             <Banner />
           </div>
 
-
-          {/* Centro: Menú de navegación */}
-          <div className="hidden md:flex flex-1 items-center justify-center">
+          {/* Centro: Menú de navegación (Desktop) */}
+          <div className="hidden md:flex items-center justify-center">
             <NavMenu isScrolled={true} />
           </div>
 
           {/* Lado Derecho: Acciones y menú móvil */}
-          <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
-            <Button asChild className="bg-brand text-white">
+          {/* Eliminamos flex-1 y agregamos shrink-0 para que los botones nunca se aplasten ni se salgan de pantalla */}
+          <div className="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
+            <Button asChild className="bg-brand text-white px-3 sm:px-4">
               <Link
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1"
               >
-                Try Free <ArrowUpRight className="h-4 w-4" />
+                <span className="hidden sm:inline">Try Free</span>
+                <span className="sm:hidden">Try Free</span> {/* Texto más corto en mobile si es necesario, o déjalo como Try Free */}
+                <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>
 
@@ -69,9 +72,17 @@ const Navbar = () => {
                 <Menu className="h-6 w-6 group-data-[state=open]:hidden" />
                 <X className="h-6 w-6 hidden group-data-[state=open]:block" />
               </PopoverTrigger>
+
+              {/*
+              CORRECCIONES DEL POPOVER:
+              1. align="end": Evita que el w-screen desborde la pantalla hacia la derecha.
+              2. overflow-y-auto: Permite hacer scroll si tienes muchos links.
+              3. p-4 o p-6: Añade respiro para que no se vea pegado a los bordes.
+            */}
               <PopoverContent
-                  className="h-[calc(100svh-5rem)] w-screen rounded-none border-none bg-back"
+                  className="h-[calc(100svh-5rem)] w-screen overflow-y-auto rounded-none border-none bg-back p-6 shadow-xl"
                   sideOffset={16}
+                  align="end"
               >
                 <NavMenu orientation="vertical" isScrolled={true} />
               </PopoverContent>
