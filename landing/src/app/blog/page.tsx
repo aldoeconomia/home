@@ -43,15 +43,12 @@ export default async function IndexPage() {
                 {/* Cabecera Tipo Editorial / Periódico */}
                 <header className="border-b-2 border-gray-900 pb-6 mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
                     <div>
-                        <span className="text-xs font-monsterrat-black tracking-widest uppercase text-brand">
-                            Qontrol Journal
-                        </span>
-                        <h1 className="text-4xl md:text-6xl font-monsterrat-black text-gray-900 mt-1 uppercase tracking-tight">
+                        <h1 className="text-4xl md:text-6xl font-monsterrat font-bold mt-1 uppercase tracking-tight">
                             Blog & News
                         </h1>
                     </div>
                     <p className="max-w-md text-sm text-gray-600 font-monsterrat-medium leading-relaxed">
-                        Noticias, comunicados oficiales, innovación y tecnología aplicada a la seguridad industrial.
+                        Noticias, comunicados oficiales y novedades.
                     </p>
                 </header>
 

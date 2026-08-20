@@ -37,7 +37,7 @@ const portableTextComponents = {
             </p>
         ),
         h1: ({ children }: any) => (
-            <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mt-10 mb-4 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-monsterrat font-bold text-gray-900 mt-10 mb-4 tracking-tight">
                 {children}
             </h1>
         ),
