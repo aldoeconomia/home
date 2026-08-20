@@ -10,65 +10,79 @@ import { NavMenu } from "./nav-menu";
 import { Logo1 } from "./logo";
 import Banner from "./banner";
 
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/forms", label: "Forms" },
+  { href: "/pricing", label: "Precios" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contacto", label: "Contacto" },
+] as const;
+
 const Navbar = () => {
   const bgClass = "bg-white shadow-sm text-black";
 
   return (
       <header className={`fixed top-0 left-0 right-0 z-50 h-20 w-full px-4 sm:px-8 lg:px-12 transition-all duration-300 ${bgClass}`}>
+        <nav className="mx-auto flex h-full w-full max-w-7xl items-center justify-between gap-4">
 
-        {/*
-        CAMBIO PRINCIPAL:
-        Cambiamos 'flex' por 'grid' y usamos 'grid-cols-[auto_1fr_auto]'.
-        Esto divide el espacio en 3 columnas estrictas:
-        1. Izquierda (Logo): Toma solo el espacio que necesita (auto).
-        2. Centro (Banner): Toma el espacio sobrante (1fr) pero NUNCA empuja a los lados.
-        3. Derecha (Botones): Toma solo el espacio que necesita (auto).
-      */}
-        <nav className="mx-auto grid h-full w-full max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-6">
-
-          {/* Lado Izquierdo: Logo */}
-          <div className="flex items-center justify-start overflow-hidden">
-            <Link href="/" className="flex items-center scale-[0.75] sm:scale-100 origin-left transition-transform">
+          {/* Lado Izquierdo: Logo + Banner */}
+          <div className="flex items-center gap-4 sm:gap-6 min-w-0">
+            <Link href="/" className="flex items-center scale-[0.75] sm:scale-100 origin-left transition-transform shrink-0">
               <Logo1 />
             </Link>
+
+            {/* Banner alineado a la izquierda */}
+            <div className="hidden sm:flex items-center min-w-0 overflow-hidden">
+              <Banner />
+            </div>
           </div>
 
-          {/* Lado Derecho / Centro: Banner */}
-          {/* Añadimos w-full y overflow-hidden para forzar a que el banner no rompa la columna */}
-          <div className="flex items-center justify-center w-full min-w-0 overflow-hidden">
-            <Banner />
-          </div>
+          {/* Lado Derecho: Lista de enlaces + Botones de acción */}
+          <div className="flex items-center gap-4 lg:gap-6">
 
-          {/* Lado Derecho: Acciones y menú móvil */}
-          {/* Aquí tus botones estarán seguros y no serán empujados */}
-          <div className="flex items-center justify-end gap-2 sm:gap-4">
+            {/* Lista de links en Desktop */}
+            <ul className="hidden md:flex items-center gap-5 text-sm font-medium text-gray-700">
+              {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                        href={link.href}
+                        className="transition-colors hover:text-black whitespace-nowrap"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+              ))}
+            </ul>
 
-            <Button asChild className="bg-brand text-white px-3 sm:px-4">
-              <Link
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1"
+            {/* Botones de acción */}
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Button asChild className="bg-brand text-white px-3 sm:px-4">
+                <Link
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1"
+                >
+                  <span className="hidden sm:inline">Try Free</span>
+                  <span className="sm:hidden">Try Free</span>
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </Button>
+
+              <Button
+                  className="hidden sm:inline-flex border-black text-black"
+                  variant="outline"
+                  asChild
               >
-                <span className="hidden sm:inline">Try Free</span>
-                <span className="sm:hidden">Try Free</span>
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </Button>
-
-            <Button
-                className="hidden sm:inline-flex border-black text-black"
-                variant="outline"
-                asChild
-            >
-              <Link
-                  href="https://app.theqontrol.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                Iniciar sesión
-              </Link>
-            </Button>
+                <Link
+                    href="https://app.theqontrol.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  Iniciar sesión
+                </Link>
+              </Button>
+            </div>
 
             {/* Menú Móvil */}
             <Popover>
